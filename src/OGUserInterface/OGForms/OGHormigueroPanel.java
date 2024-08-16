@@ -85,13 +85,14 @@ public class OGHormigueroPanel extends OGPanel {
         OGHormigaDTO hormigaLarva = new OGHormigaDTO();
         hormigaLarva.setTipoHormiga("Larva");
         hormigaLarva.setNombre(nombre);
-        hormigaLarva.setSexo("Asexual");
+        hormigaLarva.setIdSexo("Asexual");
         hormigaLarva.setEstado("VIVA");
         hormigaLarva.setUbicacion(generarUbicacionAleatoria()); 
         
         return hormigaDAO.ogCreate(hormigaLarva);
     }
 
+   
     public void cargarHormigas() {
         try {
             List<OGHormigaDTO> hormigas = hormigaDAO.ogReadAll();
@@ -108,11 +109,11 @@ public class OGHormigueroPanel extends OGPanel {
                 String tipoHormiga = hormiga.getTipoHormiga();
                 String estado = hormiga.getEstado();
     
-                // Agregar una fila al modelo de la tabla con los valores obtenidos
+                
                 model.addRow(new Object[] { nombreRegion, tipoHormiga, nombreProvincia, nombreSexo, nombreGenoAlimento, nombreIngestaNativa, estado });
             }
     
-            // Establecer el modelo en la tabla
+            
             tablaHormigas.setModel(model);
         } catch (SQLException e) {
             e.printStackTrace();

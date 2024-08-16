@@ -77,7 +77,7 @@ public class OGBottomPanel extends OGPanel {
             if (confirm == JOptionPane.YES_OPTION) {
                 try {
                     hormigaDAO.ogDelete(hormiga.getIdHormiga());
-                    hormigueroPanel.cargarHormigas(); // Recargar la tabla después de eliminar
+                    hormigueroPanel.cargarHormigas(); 
                     JOptionPane.showMessageDialog(this, "Hormiga eliminada exitosamente", "Eliminar",
                             JOptionPane.INFORMATION_MESSAGE);
                 } catch (Exception e) {

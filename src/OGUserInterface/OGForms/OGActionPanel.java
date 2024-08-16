@@ -28,10 +28,10 @@ public class OGActionPanel extends OGPanel {
     private OGHormigueroPanel hormigueroPanel;
 
     public OGActionPanel(OGHormigueroPanel hormigueroPanel) {
-        super(20, OGStyles.OGCOLOR_BORDER); // Cambia color de fondo de Alimentos
+        super(20, OGStyles.OGCOLOR_BORDER); 
         this.hormigueroPanel = hormigueroPanel;
 
-        // Inicializar hormigaDAO asegurando la conexión
+       
         hormigaDAO = new OGHormigaDAO();
 
         OGIngestaNativaDAO ingestaDAO = new OGIngestaNativaDAO();
